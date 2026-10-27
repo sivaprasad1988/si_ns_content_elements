@@ -1,0 +1,19 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  Woit\SiNsContentElements\:
+    resource: '../Classes/*'
+
+  # Replaces the page module filter of EXT:news (which hides all news content elements in news folders).
+  # Outside the news mode the original listener is called unchanged.
+  Woit\SiNsContentElements\EventListener\FilterPageModuleContent:
+    decorates: GeorgRinger\News\Event\Listener\ModifyDatabaseQueryForContentEventListener
+    arguments:
+      $inner: '@.inner'
+
+  # Called via GeneralUtility::callUserFunction() (TCA customControls)
+  Woit\SiNsContentElements\Form\PageModuleControl:
+    public: true

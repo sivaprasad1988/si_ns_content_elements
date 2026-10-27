@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" datatype="plaintext" original="EXT:si_ns_content_elements/Resources/Private/Language/locallang_be.xlf">
+		<body>
+			<trans-unit id="button.editInPageModule">
+				<source>Edit content in page module</source>
+			</trans-unit>
+			<trans-unit id="button.backToNews">
+				<source>Back to news</source>
+			</trans-unit>
+			<trans-unit id="header.title">
+				<source>Content elements of news "%s"</source>
+			</trans-unit>
+			<trans-unit id="header.description">
+				<source>Only the content elements of this news record are shown. New content elements are added to this news record.</source>
+			</trans-unit>
+			<trans-unit id="header.editNews">
+				<source>Edit news record</source>
+			</trans-unit>
+			<trans-unit id="header.leave">
+				<source>Show all content elements</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

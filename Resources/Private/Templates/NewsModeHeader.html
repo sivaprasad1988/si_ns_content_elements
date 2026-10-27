@@ -1,0 +1,13 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:core="http://typo3.org/ns/TYPO3/CMS/Core/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:be.infobox title="{f:translate(key: 'LLL:EXT:si_ns_content_elements/Resources/Private/Language/locallang_be.xlf:header.title', arguments: {0: news.title})}" state="{f:constant(name: 'TYPO3\CMS\Fluid\ViewHelpers\Be\InfoboxViewHelper::STATE_INFO')}">
+    <p><f:translate key="LLL:EXT:si_ns_content_elements/Resources/Private/Language/locallang_be.xlf:header.description" /></p>
+    <a href="{editNewsUrl}" class="btn btn-default">
+        <core:icon identifier="actions-open" size="small" />
+        <f:translate key="LLL:EXT:si_ns_content_elements/Resources/Private/Language/locallang_be.xlf:header.editNews" />
+    </a>
+    <a href="{leaveUrl}" class="btn btn-default" data-si-ns-leave="1">
+        <core:icon identifier="actions-close" size="small" />
+        <f:translate key="LLL:EXT:si_ns_content_elements/Resources/Private/Language/locallang_be.xlf:header.leave" />
+    </a>
+</f:be.infobox>
+</html>

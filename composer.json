@@ -1,0 +1,41 @@
+{
+    "name": "woit/si-ns-content-elements",
+    "type": "typo3-cms-extension",
+    "description": "Edit the content elements of a news record in the page module",
+    "license": [
+        "GPL-2.0-or-later"
+    ],
+    "keywords": [
+        "TYPO3 CMS",
+        "news",
+        "content elements",
+        "page module"
+    ],
+    "homepage": "https://github.com/sivaprasad1988/si_ns_content_elements",
+    "support": {
+        "issues": "https://github.com/sivaprasad1988/si_ns_content_elements/issues",
+        "source": "https://github.com/sivaprasad1988/si_ns_content_elements"
+    },
+    "authors": [
+        {
+            "name": "Siva",
+            "email": "siva@webofficeit.com"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^14.3",
+        "typo3/cms-backend": "^14.3",
+        "typo3/cms-fluid": "^14.3",
+        "georgringer/news": "^14.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Woit\\SiNsContentElements\\": "Classes/"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "si_ns_content_elements"
+        }
+    }
+}
