@@ -34,7 +34,9 @@ final class RelateNewContentToNews
             if (isset($item['header'])) {
                 continue;
             }
+            // TYPO3 13: "defaultValues", TYPO3 12: "tt_content_defValues"
             $wizardItems[$identifier]['defaultValues']['tx_news_related_news'] = (int)$news['uid'];
+            $wizardItems[$identifier]['tt_content_defValues']['tx_news_related_news'] = (int)$news['uid'];
         }
         $event->setWizardItems($wizardItems);
     }

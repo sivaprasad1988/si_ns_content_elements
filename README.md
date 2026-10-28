@@ -93,7 +93,7 @@ elements are shown in news mode, too.
 | Button "Back to news" in the page module | `ModifyButtonBarEvent` (`AddBackToNewsButton`) |
 | Keep the news mode on page module links | JavaScript module `keep-news-mode.js` |
 | Filter page module content | Decorates the EXT:news `ModifyDatabaseQueryForContentEvent` listener (`FilterPageModuleContent`) |
-| Relate new content to the news | `ModifyNewContentElementWizardItemsEvent` (`defaultValues`, `RelateNewContentToNews`) |
+| Relate new content to the news | `ModifyNewContentElementWizardItemsEvent` (`defaultValues` / v12: `tt_content_defValues`, `RelateNewContentToNews`) |
 | Column of news content elements | FormEngine data provider `Form\FormDataProvider\NewsContentColPos` (`tcaDatabaseRecord`) |
 
 ## Troubleshooting
