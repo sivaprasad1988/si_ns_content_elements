@@ -10,6 +10,11 @@ field "Content elements" of the news record.
 - PHP 8.2 - 8.5
 - Composer mode
 
+| Extension version (branch) | TYPO3 | EXT:news |
+|----------------------------|-------|----------|
+| 2.x (`main`) | 14.3 | 14.1+ |
+| 1.x (`1.x`) | 12.4, 13.4 | 11, 12, 13 |
+
 ## Installation
 
 ```bash
