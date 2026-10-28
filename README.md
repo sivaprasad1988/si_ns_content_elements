@@ -3,6 +3,15 @@
 Edit the content elements of an EXT:news record in the TYPO3 page module instead of the inline
 field "Content elements" of the news record.
 
+## Extension
+
+| | |
+|---|---|
+| Extension key | `si_ns_content_elements` |
+| Composer package | `woit/si-ns-content-elements` |
+| PHP namespace | `Woit\SiNsContentElements\` |
+| Page TSconfig / URL parameter | `tx_sinscontentelements` |
+
 ## Requirements
 
 - TYPO3 14.3
@@ -18,7 +27,13 @@ field "Content elements" of the news record.
 ## Installation
 
 ```bash
-composer require woit/si-ns-content-elements
+composer require woit/si-ns-content-elements:^2.0
+```
+
+As long as the package is not available on Packagist, add the GitHub repository first:
+
+```bash
+composer config repositories.si-ns-content-elements vcs https://github.com/sivaprasad1988/si_ns_content_elements
 ```
 
 Flush the caches afterwards. No database changes are needed: the extension uses the field
