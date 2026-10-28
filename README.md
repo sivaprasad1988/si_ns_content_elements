@@ -75,6 +75,16 @@ Existing content elements can also be moved directly in the database, e.g. to co
 UPDATE tt_content SET colPos = 0 WHERE tx_news_related_news > 0 AND deleted = 0 AND pid = 123;
 ```
 
+### EXT:news notice below the field "Content elements"
+
+EXT:news shows a notice below the field "Content elements" of the news record. It is kept by default; the link of
+this extension is shown next to it. To remove the notice, enable **Hide the EXT:news notice** in
+**Admin Tools > Settings > Extension Configuration > si_ns_content_elements**:
+
+```php
+$GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['si_ns_content_elements']['hideNewsNotice'] = '1';
+```
+
 ## Usage
 
 1. Open a saved news record.
@@ -103,7 +113,7 @@ elements are shown in news mode, too.
 | Part | Implementation |
 |------|----------------|
 | Button in the news form (doc header) | `ModifyButtonBarEvent` (`AddPageModuleButton`) |
-| Link below the inline field "Content elements" | TCA `customControls` (`Form\PageModuleControl`); replaces the EXT:news control `ce` (hint for EXT:news_content_elements) |
+| Link below the inline field "Content elements" | TCA `customControls` (`Form\PageModuleControl`), added next to the EXT:news control `ce` |
 | Switch news mode, info box | `ModifyPageLayoutContentEvent` (`AddNewsModeHeader`) |
 | Button "Back to news" in the page module | `ModifyButtonBarEvent` (`AddBackToNewsButton`) |
 | Keep the news mode on page module links | JavaScript module `keep-news-mode.js` |
@@ -123,6 +133,10 @@ elements are shown in news mode, too.
 ## Localization
 
 Backend labels: English and German (`Resources/Private/Language/locallang_be.xlf`, `de.locallang_be.xlf`).
+
+## Disclaimer
+
+This extension is an independent project. It is not affiliated with or endorsed by EXT:news or its author.
 
 ## License
 
