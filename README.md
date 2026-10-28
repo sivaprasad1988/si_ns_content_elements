@@ -75,10 +75,10 @@ Existing content elements can also be moved directly in the database, e.g. to co
 UPDATE tt_content SET colPos = 0 WHERE tx_news_related_news > 0 AND deleted = 0 AND pid = 123;
 ```
 
-### EXT:news notice below the field "Content elements"
+### News add-on hint below the field "Content elements"
 
-EXT:news shows a notice below the field "Content elements" of the news record. It is kept by default; the link of
-this extension is shown next to it. To remove the notice, enable **Hide the EXT:news notice** in
+EXT:news shows a hint for its add-on below the field "Content elements" of the news record. It is kept by default;
+the link of this extension is shown next to it. To remove the hint, enable **Hide the news add-on hint** in
 **Admin Tools > Settings > Extension Configuration > si_ns_content_elements**:
 
 ```php

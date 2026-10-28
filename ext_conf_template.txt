@@ -1,2 +1,2 @@
-# cat=basic; type=boolean; label=Hide the EXT:news notice below the field "Content elements": EXT:news shows a notice there. If enabled, it is removed and only the link of this extension is shown.
+# cat=basic; type=boolean; label=Hide the news add-on hint below the field "Content elements": EXT:news shows a hint for its add-on there. If enabled, the hint is removed and only the link of this extension is shown.
 hideNewsNotice = 0
