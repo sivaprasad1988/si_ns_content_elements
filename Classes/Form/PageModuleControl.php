@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Woit\SiNsContentElements\Form;
 
+use TYPO3\CMS\Core\Imaging\Icon;
 use TYPO3\CMS\Core\Imaging\IconFactory;
-use TYPO3\CMS\Core\Imaging\IconSize;
 use TYPO3\CMS\Core\Localization\LanguageService;
 use Woit\SiNsContentElements\Service\NewsMode;
 
@@ -34,7 +34,7 @@ final class PageModuleControl
         return sprintf(
             '<a href="%s" class="btn btn-default">%s %s</a>',
             htmlspecialchars($this->newsMode->buildPageModuleUri((int)$row['pid'], $newsUid)),
-            $this->iconFactory->getIcon('module-page', IconSize::SMALL),
+            $this->iconFactory->getIcon('module-page', Icon::SIZE_SMALL),
             htmlspecialchars($this->getLanguageService()->sL('LLL:EXT:si_ns_content_elements/Resources/Private/Language/locallang_be.xlf:button.editInPageModule'))
         );
     }

@@ -45,8 +45,7 @@ final class NewsMode
     {
         return (string)$this->uriBuilder->buildUriFromRoute('record_edit', [
             'edit' => [self::NEWS_TABLE => [(int)$news['uid'] => 'edit']],
-            // "records" = list module; "web_list" is only an alias in TYPO3 14
-            'returnUrl' => (string)$this->uriBuilder->buildUriFromRoute('records', ['id' => (int)$news['pid']]),
+            'returnUrl' => (string)$this->uriBuilder->buildUriFromRoute('web_list', ['id' => (int)$news['pid']]),
         ]);
     }
 

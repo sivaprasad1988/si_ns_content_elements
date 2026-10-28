@@ -7,6 +7,26 @@ services:
   Woit\SiNsContentElements\:
     resource: '../Classes/*'
 
+  Woit\SiNsContentElements\EventListener\AddPageModuleButton:
+    tags:
+      - name: event.listener
+        identifier: 'woit/si-ns-content-elements/page-module-button'
+
+  Woit\SiNsContentElements\EventListener\AddBackToNewsButton:
+    tags:
+      - name: event.listener
+        identifier: 'woit/si-ns-content-elements/back-to-news-button'
+
+  Woit\SiNsContentElements\EventListener\AddNewsModeHeader:
+    tags:
+      - name: event.listener
+        identifier: 'woit/si-ns-content-elements/news-mode-header'
+
+  Woit\SiNsContentElements\EventListener\RelateNewContentToNews:
+    tags:
+      - name: event.listener
+        identifier: 'woit/si-ns-content-elements/relate-new-content'
+
   # Replaces the page module filter of EXT:news (which hides all news content elements in news folders).
   # Outside the news mode the original listener is called unchanged.
   Woit\SiNsContentElements\EventListener\FilterPageModuleContent:

@@ -33,7 +33,11 @@ final class NewsContentColPos implements FormDataProviderInterface
             return $result;
         }
         $configuredColPos = (int)$configuredColPos;
-        $columns = array_map(intval(...), $this->backendLayoutView->getBackendLayoutForPage($pageId)->getColumnPositionNumbers());
+        $backendLayout = $this->backendLayoutView->getBackendLayoutForPage($pageId);
+        if ($backendLayout === null) {
+            return $result;
+        }
+        $columns = array_map(intval(...), $backendLayout->getColumnPositionNumbers());
         if (!in_array($configuredColPos, $columns, true)) {
             return $result;
         }

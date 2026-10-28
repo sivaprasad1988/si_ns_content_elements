@@ -5,10 +5,15 @@ field "Content elements" of the news record.
 
 ## Requirements
 
-- TYPO3 14.3
-- EXT:news 14.1+
-- PHP 8.2 - 8.5
+- TYPO3 12.4 or 13.4
+- EXT:news 11, 12 or 13
+- PHP 8.1 - 8.4 (TYPO3 13: PHP 8.2+)
 - Composer mode
+
+| Extension version (branch) | TYPO3 | EXT:news |
+|----------------------------|-------|----------|
+| 1.x (`1.x`) | 12.4, 13.4 | 11, 12, 13 |
+| main | 14.3 | 14.1+ |
 
 ## Installation
 

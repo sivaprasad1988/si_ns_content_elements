@@ -4,22 +4,27 @@ declare(strict_types=1);
 
 namespace Woit\SiNsContentElements\EventListener;
 
+use Psr\Http\Message\ServerRequestInterface;
 use TYPO3\CMS\Backend\Controller\Event\ModifyNewContentElementWizardItemsEvent;
-use TYPO3\CMS\Core\Attribute\AsEventListener;
 use Woit\SiNsContentElements\Service\NewsMode;
 
 /**
  * News mode: content elements created via the new content element wizard belong to the active news record.
  * The default values end up in the DataHandler data map (defVals) when the record is saved.
+ * Registered in Services.yaml.
  */
-#[AsEventListener('woit/si-ns-content-elements/relate-new-content')]
 final class RelateNewContentToNews
 {
     public function __construct(private readonly NewsMode $newsMode) {}
 
     public function __invoke(ModifyNewContentElementWizardItemsEvent $event): void
     {
-        $news = $this->newsMode->getActiveNews($event->getRequest(), (int)($event->getPageInfo()['uid'] ?? 0));
+        // ModifyNewContentElementWizardItemsEvent::getRequest() does not exist in TYPO3 12
+        $request = $GLOBALS['TYPO3_REQUEST'] ?? null;
+        $news = $this->newsMode->getActiveNews(
+            $request instanceof ServerRequestInterface ? $request : null,
+            (int)($event->getPageInfo()['uid'] ?? 0)
+        );
         if ($news === null) {
             return;
         }
