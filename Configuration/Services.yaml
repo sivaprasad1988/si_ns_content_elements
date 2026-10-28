@@ -17,3 +17,7 @@ services:
   # Called via GeneralUtility::callUserFunction() (TCA customControls)
   Woit\SiNsContentElements\Form\PageModuleControl:
     public: true
+
+  # Instantiated by FormEngine via GeneralUtility::makeInstance()
+  Woit\SiNsContentElements\Form\FormDataProvider\NewsContentColPos:
+    public: true
